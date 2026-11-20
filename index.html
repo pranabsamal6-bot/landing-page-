@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Techfest 30 | IIT Bombay | Landing Page Concept</title>
+<meta name="description" content="Techfest, IIT Bombay turns 30. Asia’s largest college festival, 16–18 December 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@75..150,500..900&family=Instrument+Sans:wght@400;600&display=swap">
+<style>
+:root{--blue:#2336ff;--ink:#0a0f3c;--paper:#f2f4ff;--sig:#ffe14a;
+--disp:"Anybody","Arial Narrow",Impact,sans-serif;--text:"Instrument Sans",system-ui,sans-serif;color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.1rem/1.6 var(--text)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sig);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 1.5rem}
+h1,h2,h3{font-family:var(--disp);font-stretch:100%;line-height:.92;letter-spacing:-.02em;margin:0}
+/* nav */
+nav{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.5rem;color:#fff}
+.logo{font:800 1.4rem var(--disp);text-decoration:none;letter-spacing:-.03em}
+.pill{display:inline-block;background:var(--sig);color:var(--ink);font:600 1rem var(--text);padding:.75rem 1.4rem;border-radius:999px;text-decoration:none;transition:transform .2s}
+.pill:hover{transform:translateY(-3px) rotate(-1.5deg)}
+/* hero */
+#hero{position:relative;overflow:hidden;background:var(--blue);color:#fff;padding:7rem 0 4rem;--mx:50%;--my:40%;
+background-image:radial-gradient(520px circle at var(--mx) var(--my),rgba(255,255,255,.22),transparent 60%)}
+.big{font:900 clamp(11rem,42vw,30rem)/.8 var(--disp);font-stretch:140%;color:var(--sig);margin:0 0 -.05em -.04em;letter-spacing:-.06em;user-select:none}
+#hero h1{font-size:clamp(2.2rem,6vw,4.6rem);max-width:15ch;font-stretch:90%}
+#hero p{max-width:36rem;font-size:1.25rem;margin:1.2rem 0 2rem;color:#e6e9ff}
+.cd{display:flex;gap:1.2rem;margin:0 0 2rem;flex-wrap:wrap}
+.cd div{min-width:4.5rem}
+.cd b{display:block;font:800 clamp(2.2rem,6vw,3.6rem)/1 var(--disp);font-variant-numeric:tabular-nums}
+.cd span{font-size:.9rem;color:#cfd5ff}
+/* marquee */
+.mq{background:var(--ink);color:var(--sig);overflow:hidden;white-space:nowrap;padding:1rem 0}
+.mq div{display:inline-block;animation:slide 28s linear infinite;font:700 1.6rem var(--disp);font-stretch:120%}
+.mq span{margin:0 1.6rem}
+@keyframes slide{to{transform:translateX(-50%)}}
+/* ways in */
+section{padding:5rem 0}
+h2{font-size:clamp(2.4rem,6vw,4.4rem);margin-bottom:2.5rem}
+details{border-top:2px solid var(--ink)}
+details:last-of-type{border-bottom:2px solid var(--ink)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:1.3rem 0;font:800 clamp(1.8rem,5vw,3.4rem)/1 var(--disp);font-stretch:110%;transition:padding .25s,color .25s}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:2.4rem;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+summary:hover{padding-left:1rem;color:var(--blue)}
+details p{margin:0 0 1.5rem;max-width:40rem}
+/* stats */
+#stats{background:var(--sig)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2.5rem 2rem}
+.grid dt{font:900 clamp(3rem,8vw,5.5rem)/1 var(--disp);font-stretch:120%;color:var(--blue)}
+.grid dd{margin:.4rem 0 0;font-weight:600}
+/* timeline */
+ol{list-style:none;margin:0;padding:0 0 0 1.6rem;border-left:3px solid var(--ink)}
+li{position:relative;padding:0 0 2rem 1.6rem}
+li::before{content:"";position:absolute;left:-2.35rem;top:.35rem;width:1.1rem;height:1.1rem;border-radius:50%;background:var(--paper);border:3px solid var(--ink)}
+li.done::before{background:var(--ink)}
+li.next::before{background:var(--blue);border-color:var(--blue);box-shadow:0 0 0 6px rgba(35,54,255,.2)}
+li h3{font-size:1.9rem;font-stretch:110%;margin-bottom:.3rem}
+li small{font-size:1rem;opacity:.75}
+/* cta */
+#cta{background:var(--ink);color:#fff;text-align:center}
+#cta h2{margin:0 auto 1.5rem;max-width:14ch}
+#cta small{display:block;margin-top:2.5rem;color:#aab1e8;font-size:.95rem}
+@media (prefers-reduced-motion:reduce){.mq div{animation:none}html{scroll-behavior:auto}.pill:hover{transform:none}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="#hero">Techfest</a>
+  <a class="pill" href="https://techfest.org" target="_blank" rel="noopener">Register on techfest.org</a>
+</nav>
+
+<header id="hero">
+  <div class="wrap">
+    <div class="big" aria-hidden="true">30</div>
+    <h1>Asia’s largest college festival turns thirty.</h1>
+    <p>Three days at IIT Bombay, run entirely by students: contests, workshops, talks and exhibits for people who like building things.</p>
+    <div class="cd" id="cd" role="timer" aria-label="Time until Techfest begins">
+      <div><b id="d">00</b><span>days</span></div>
+      <div><b id="h">00</b><span>hours</span></div>
+      <div><b id="m">00</b><span>minutes</span></div>
+      <div><b id="s">00</b><span>seconds</span></div>
+    </div>
+    <a class="pill" href="https://techfest.org" target="_blank" rel="noopener">See what’s on</a>
+  </div>
+</header>
+
+<div class="mq" aria-hidden="true"><div>
+  <span>Competitions</span><span>Workshops</span><span>Lectures</span><span>Exhibitions</span><span>Competitions</span><span>Workshops</span><span>Lectures</span><span>Exhibitions</span><span>Competitions</span><span>Workshops</span><span>Lectures</span><span>Exhibitions</span><span>Competitions</span><span>Workshops</span><span>Lectures</span><span>Exhibitions</span>
+</div></div>
+
+<section id="ways">
+  <div class="wrap">
+    <h2>Four ways in</h2>
+    <details open><summary>Compete</summary><p>National contests with real prize money, like the Probability Challenge run with Jane Street (₹3.8 lakh prize pool). Bring a team or go solo.</p></details>
+    <details><summary>Learn</summary><p>Hands-on workshops in AI, machine learning, cybersecurity, IoT, robotics and the stock market, with certificates from IIT Bombay.</p></details>
+    <details><summary>Listen</summary><p>Lectures from scientists, space and defence leaders and Nobel-level researchers who have visited the campus in past editions.</p></details>
+    <details><summary>Explore</summary><p>Exhibits and demos across the campus, from robots to record attempts. Techfest has set a Guinness World Record for most LED lights lit simultaneously.</p></details>
+  </div>
+</section>
+
+<section id="stats">
+  <div class="wrap">
+    <h2>Thirty years of showing up</h2>
+    <dl class="grid">
+      <div><dt>1998</dt><dd>The first Techfest</dd></div>
+      <div><dt>1.65 lakh</dt><dd>Record footfall, 2015–16 edition</dd></div>
+      <div><dt>₹3.8 lakh</dt><dd>Prize pool of the Probability Challenge</dd></div>
+      <div><dt>3 days</dt><dd>16–18 December 2026</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="road">
+  <div class="wrap">
+    <h2>The road to December</h2>
+    <ol id="tl">
+      <li data-d="2026-10-15"><h3>Registrations close</h3><small>15 October 2026, Probability Challenge</small></li>
+      <li data-d="2026-11-10"><h3>Round 1 results</h3><small>10 November 2026</small></li>
+      <li data-d="2026-12-16"><h3>Offline grand finale</h3><small>16 December 2026, IIT Bombay</small></li>
+      <li data-d="2026-12-18"><h3>Techfest closes</h3><small>18 December 2026</small></li>
+    </ol>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="wrap">
+    <h2>See you at IIT Bombay.</h2>
+    <a class="pill" href="https://techfest.org" target="_blank" rel="noopener">Go to techfest.org</a>
+    <small>A concept landing page for Techfest. Not the official website.</small>
+  </div>
+</section>
+
+<script>
+(function(){
+  var t=new Date('2026-12-16T00:00:00+05:30').getTime(),el={d:d,h:h,m:m,s:s};
+  function p(n){return String(n).padStart(2,'0')}
+  function tick(){
+    var x=Math.max(0,t-Date.now());
+    el.d.textContent=p(Math.floor(x/864e5));
+    el.h.textContent=p(Math.floor(x/36e5)%24);
+    el.m.textContent=p(Math.floor(x/6e4)%60);
+    el.s.textContent=p(Math.floor(x/1e3)%60);
+  }
+  tick();setInterval(tick,1000);
+  var hero=document.getElementById('hero');
+  hero.addEventListener('pointermove',function(e){
+    var r=hero.getBoundingClientRect();
+    hero.style.setProperty('--mx',(e.clientX-r.left)+'px');
+    hero.style.setProperty('--my',(e.clientY-r.top)+'px');
+  });
+  var now=Date.now(),items=[].slice.call(document.querySelectorAll('#tl li')),nextSet=false;
+  items.forEach(function(li){
+    var d=new Date(li.dataset.d+'T23:59:59+05:30').getTime();
+    if(d<now)li.classList.add('done');
+    else if(!nextSet){li.classList.add('next');nextSet=true}
+  });
+})();
+</script>
+</body>
+</html>
